@@ -1,15 +1,17 @@
-export type SpeechToTextEnginesURLs = Record<SpeechToTextEngines, string>;
+import { ButtonHTMLAttributes, CSSProperties, RefObject } from 'react';
 
-export type TranscriberResponse = {
-  error: string | null;
-  transcript: string;
-  loading: boolean;
+export type ScrollToTopControllerProps = ButtonHTMLAttributes<HTMLButtonElement>;
+
+export enum DefaultControllerProps {
+  CLASSNAME= 'algrith-scroll-to-top-controller',
+  ID = 'algrith-scroll-to-top-controller'
 };
 
-export type TranscriberOptions = {
-  engine: SpeechToTextEngines
-};
-
-export enum SpeechToTextEngines {
-  GOOGLE = 'google'
+export type UseScrollToTopProps = {
+  controllerRef?: RefObject<HTMLElement | null>;
+  display?: CSSProperties['display'];
+  hideControllerAt?: number;
+  behavior?: ScrollBehavior;
+  selector?: string;
+  top?: number;
 };

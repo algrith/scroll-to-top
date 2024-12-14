@@ -10,11 +10,11 @@ const AppDocument = () => {
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 
-        <meta property="og:keywords" name="keywords" content="Algrith Speech to Text, Audio Transcriber" />
+        <meta property="og:keywords" name="keywords" content="Algrith Scroll to Top" />
         <meta property="og:image" name="image" content="/images/logo/algrith-transparent.png" />
-        <meta property="og:description" name="description" content="Algrith Speech Transcriber" />
+        <meta property="og:description" name="description" content="Algrith Scroll to Top" />
         <meta property="og:author" name="author" content="Algrith" />
-        <meta name="description" content="Algrith Speech Transcriber" />
+        <meta name="description" content="Algrith Scroll to Top" />
         
         <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/android-chrome-512x512.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-chrome-192x192.png" />

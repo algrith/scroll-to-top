@@ -1,5 +1,5 @@
 {
-  "name": "algrith-speech-to-text-transcriber",
+  "name": "algrith-scroll-to-top-with-nextjs-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,6 @@
     "start": "next start -p $PORT"
   },
   "dependencies": {
-    "@algrith/transcriber": "*",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "eslint-config-next": "^14.0.4",
@@ -16,12 +15,10 @@
     "next": "^14.0.4",
     "next-connect": "^0.9.1",
     "next-pwa": "^5.6.0",
-    "opus-recorder": "^8.0.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "swr": "^2.2.4",
-    "twin.macro": "^3.4.0",
-    "wavesurfer.js": "^7.7.0"
+    "twin.macro": "^3.4.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.23.3",

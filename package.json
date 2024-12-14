@@ -1,46 +1,51 @@
 {
   "repository": {
-    "url": "git+https://github.com/algrith/transcriber.git",
+    "url": "git+https://github.com/algrith/scroll-to-top.git",
     "type": "git"
   },
-  "homepage": "https://packages.algrith.com/transcriber",
+  "homepage": "https://packages.algrith.com/scroll-to-top",
   "module": "dist/index.module.js",
-  "name": "@algrith/transcriber",
+  "name": "@algrith/scroll-to-top",
   "unpkg": "dist/index.umd.js",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "microbundle watch",
-    "build": "microbundle"
+    "dev": "microbundle --css-modules true watch",
+    "build": "microbundle --css-modules true"
   },
   "devDependencies": {
-    "@types/react-dom": "^19.0.2",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
     "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "babel-loader": "^9.2.1",
     "microbundle": "^0.15.1",
-    "typescript": "^5.7.2"
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack-cli": "^5.1.4"
   },
   "engines": {
     "node": "18.0.0 - 22.x.x"
   },
   "dependencies": {
-    "react-dom": "^19.0.0",
-    "react": "^19.0.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
-  "description": "A simple React Speech transcriber",
+  "description": "A simple React Scoll-to-Top tool",
   "directories": {
     "example": "examples"
   },
   "keywords": [
-    "Transcribe",
-    "Speech-to-Text",
-    "STT"
+    "Scroll to top",
+    "Back to top"
   ],
   "author": "algrith",
   "license": "MIT",
   "types": "./dist/index.d.ts",
   "bugs": {
-    "url": "https://github.com/algrith/transcriber/issues"
+    "url": "https://github.com/algrith/scroll-to-top/issues"
   }
 }
