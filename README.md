@@ -6,7 +6,7 @@
 </a> -->
 
 <h4 align="center">
-  <a href="#">React Scroll To Top</a>
+  <a href="#">Algrith Scroll To Top</a>
 </h4>
 
 <div align="center">
@@ -59,7 +59,7 @@ To use the built in controller, just import and use the controller component in 
 import { ScrollToTopController } from '@algrith/scroll-to-top';
 
 const ScrollToTopWithController = () => {
-	return (
+  return (
     <div>
       <h2>Using Controller Component (Check bottom-right corner)</h2>
       <ScrollToTopController />
@@ -86,8 +86,8 @@ import { useScrollToTop } from '@algrith/scroll-to-top';
 
 const ScrollToTopWithHook = () => {
   const scrollToTop = useScrollToTop();
-
-	return (
+  
+  return (
     <div>
       <h1>Using Exported Method</h1>
       <button onClick={scrollToTop} type="button">Scroll to Top</button>
@@ -111,8 +111,8 @@ import { useRef } from 'react';
 const ScrollToTopWithHookAndRef = () => {
   const controllerRef = useRef(null);
   useScrollToTop({ controllerRef });
-
-	return (
+  
+  return (
     <div>
       <h1>Using Hook and Ref</h1>
       <button ref={controllerRef} type="button">Scroll to Top</button>
@@ -130,8 +130,8 @@ import { useScrollToTop } from '@algrith/scroll-to-top';
 
 const ScrollToTopWithHookAndSelector = () => {
   useScrollToTop({ selector: `#scroll-to-top` });
-
-	return (
+  
+  return (
     <div>
       <h1>Using Hook and Selector</h1>
       <button id="scroll-to-top" type="button">Scroll to Top</button>
