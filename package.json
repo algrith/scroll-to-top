@@ -3,7 +3,7 @@
     "url": "git+https://github.com/algrith/scroll-to-top.git",
     "type": "git"
   },
-  "homepage": "https://packages.algrith.com/scroll-to-top",
+  "homepage": "https://github.com/algrith/scroll-to-top",
   "module": "dist/index.module.js",
   "name": "@algrith/scroll-to-top",
   "unpkg": "dist/index.umd.js",
@@ -34,7 +34,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
-  "description": "A simple React Scoll-to-Top tool",
+  "description": "A lightweight utility function to smoothly scroll to the top of a web page, ideal for single-page applications or user-friendly navigation.",
   "directories": {
     "example": "examples"
   },
@@ -42,7 +42,7 @@
     "Scroll to top",
     "Back to top"
   ],
-  "author": "algrith",
+  "author": "Algrith LLC <algrithllc@gmail.com> (https://algrith-astongemmy.vercel.app)",
   "license": "MIT",
   "types": "./dist/index.d.ts",
   "bugs": {

@@ -6,15 +6,12 @@
 </a> -->
 
 <h4 align="center">
-  <!-- <a href="https://scroll-to-top.com">Excalidraw Editor</a> | -->
-  <!-- <a href="https://plus.scroll-to-top.com/blog">Blog</a> | -->
-  <a href="https://docs.scroll-to-top.com">Documentation</a> |
-  <a href="https://scroll-to-top.com">React Scroll To Top</a>
+  <a href="#">React Scroll To Top</a>
 </h4>
 
 <div align="center">
   <h2>
-    A simple React tool for scrolling to top of page.
+    A lightweight utility function to smoothly scroll to the top of a web page, ideal for single-page applications or user-friendly navigation.
   </h2>
 </div>
 
@@ -26,45 +23,15 @@
   <a href="https://www.npmjs.com/package/@algrith/scroll-to-top">
     <img alt="npm downloads/month" src="https://img.shields.io/npm/dm/@algrith/scroll-to-top" />
   </a>
-  <!-- <a href="https://docs.excalidraw.com/docs/introduction/contributing">
-    <img alt="PRs welcome!" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat"  />
-  </a> -->
-  <!-- <a href="https://discord.gg/UexuTaE">
-    <img alt="Chat on Discord" src="https://img.shields.io/discord/723672430744174682?color=738ad6&label=Chat%20on%20Discord&logo=discord&logoColor=ffffff&widge=false"/>
-  </a>
-  <a href="https://twitter.com/excalidraw">
-    <img alt="Follow Excalidraw on Twitter" src="https://img.shields.io/twitter/follow/excalidraw.svg?label=follow+@excalidraw&style=social&logo=twitter"/>
-  </a> -->
 </p>
-
-<!-- <div align="center">
-  <figure>
-    <a href="https://excalidraw.com" target="_blank" rel="noopener">
-      <img src="https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github%2Fproduct_showcase.png" alt="Product showcase" />
-    </a>
-    <figcaption>
-      <p align="center">
-        Create beautiful hand-drawn like diagrams, wireframes, or whatever you like.
-      </p>
-    </figcaption>
-  </figure>
-</div> -->
 
 ## Features
 
-The React Scroll To Top (npm package) supports:
+The Algrith Scroll To Top (npm package) supports:
 
-<!-- - 💯&nbsp;Free & open-source. -->
-- 🎨&nbsp;Usage with built-in controller component.
-- ✍️&nbsp;Direct hook usage.
-- ⚒️&nbsp;Hook usage with ref or query selector.
-
-## AlgrithScrollToTop.com
-
-The app hosted at [scroll-to-top.com](https://scroll-to-top.com) is a minimal showcase of what you can build with React Scroll To Top. Its [source code](https://github.com/astongemmy/scroll-to-top/tree/main/src) is part of this repository as well, and the app features:
-
-<!-- - 📡&nbsp;PWA support (works offline). -->
-<!-- - 🤼&nbsp;Real-time collaboration. -->
+- 🕹️&nbsp;Usage with built-in controller component.
+- 🪝&nbsp;Direct usage with exposed hook method.
+- 🪝🔍&nbsp;Usage with hook & ref/query selector.
 
 ## Quick start
 
@@ -80,25 +47,101 @@ or via yarn
 yarn add @algrith/scroll-to-top
 ```
 
-Check out our [documentation](https://docs.scroll-to-top.com/installation) for more details!
+## Usage & Examples
+
+Currently, there is an implemented usage for all available methods for [NextJs (Using page router) example](https://github.com/algrith/scroll-to-top/tree/main/examples/with-nextjs).
+
+### Usage with built-in controller component.
+
+To use the built in controller, just import and use the controller component in your root layout/page component file.
+
+```
+import { ScrollToTopController } from '@algrith/scroll-to-top';
+
+const ScrollToTopWithController = () => {
+	return (
+    <div>
+      <h2>Using Controller Component (Check bottom-right corner)</h2>
+      <ScrollToTopController />
+    </div>
+  );
+};
+
+export default ScrollToTopWithController;
+```
+
+If you wish to use the default styled controller, then you must also import the css files in your component file.
+```
+import '@algrith/scroll-to-top/dist/index.css';
+```
+
+### Direct usage with exposed hook method.
+
+You could also attach the `scrollToTop` hook method to the `onClick` event handler of any desired element/component in your file and everything would work just the same.
+
+**Note:** This doesn't require any extra config on the hook method or css import.
+
+```
+import { useScrollToTop } from '@algrith/scroll-to-top';
+
+const ScrollToTopWithHook = () => {
+  const scrollToTop = useScrollToTop();
+
+	return (
+    <div>
+      <h1>Using Exported Method</h1>
+      <button onClick={scrollToTop} type="button">Scroll to Top</button>
+    </div>
+  );
+};
+
+export default ScrollToTopWithHook;
+```
+
+### Usage with hook & ref/query selector.
+
+You could also decide to use a custom component/element with `ref` or query selector. The choice is yours.
+
+####  With ref
+
+```
+import { useScrollToTop } from '@algrith/scroll-to-top';
+import { useRef } from 'react';
+
+const ScrollToTopWithHookAndRef = () => {
+  const controllerRef = useRef(null);
+  useScrollToTop({ controllerRef });
+
+	return (
+    <div>
+      <h1>Using Hook and Ref</h1>
+      <button ref={controllerRef} type="button">Scroll to Top</button>
+    </div>
+  );
+};
+
+export default ScrollToTopWithHookAndRef;
+```
+
+####  With query selector
+```
+
+import { useScrollToTop } from '@algrith/scroll-to-top';
+
+const ScrollToTopWithHookAndSelector = () => {
+  useScrollToTop({ selector: `#scroll-to-top` });
+
+	return (
+    <div>
+      <h1>Using Hook and Selector</h1>
+      <button id="scroll-to-top" type="button">Scroll to Top</button>
+    </div>
+  );
+};
+
+export default ScrollToTopWithHookAndSelector;
+```
 
 ## Contributing
 
-- Missing something or found a bug? [Report here](https://github.com/astongemmy/scroll-to-top/issues).
-- Want to help with translations? See the [translation guide](https://docs.scroll-to-top.com/translating).
-
-<!-- ## Integrations
-
-- [npm package](https://www.npmjs.com/package/scroll-to-top) -->
-
-<!-- ## Who's integrating React Scroll To Top
-
-[Google Cloud](https://googlecloudcheatsheet.withgoogle.com/architecture) • [Meta](https://meta.com/) • [CodeSandbox](https://codesandbox.io/) • [Obsidian Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin) • [Replit](https://replit.com/) • [Slite](https://slite.com/) • [Notion](https://notion.so/) • [HackerRank](https://www.hackerrank.com/) • and many others -->
-
-<!-- ## Sponsors & support
-
-If you like the project, you can become a sponsor at [Open Collective](https://opencollective.com/scroll-to-top). -->
-
-<!-- ## Thank you for supporting React Scroll To Top
-
-[<img src="https://opencollective.com/excalidraw/tiers/sponsors/0/avatar.svg?avatarHeight=120"/>](https://opencollective.com/excalidraw/tiers/sponsors/0/website) -->
+- Missing something or found a bug? [Report here](https://github.com/algrith/scroll-to-top/issues).
