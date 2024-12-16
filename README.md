@@ -35,8 +35,6 @@ The Algrith Scroll To Top (npm package) supports:
 
 ## Quick start
 
-**Note:** following instructions are for installing the Algrith Scroll To Top [npm package](https://www.npmjs.com/package/@algrith/scroll-to-top) when integrating Algrith Scroll To Top into your own app.
-
 ```
 npm install @algrith/scroll-to-top
 ```
@@ -141,6 +139,10 @@ const ScrollToTopWithHookAndSelector = () => {
 
 export default ScrollToTopWithHookAndSelector;
 ```
+
+##  TypeScript Support
+
+Types files can be found at https://github.com/algrith/scroll-to-top/tree/main/src/types.
 
 ## Contributing
 
